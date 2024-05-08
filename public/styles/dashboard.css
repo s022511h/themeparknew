@@ -1,0 +1,97 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button, select {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+#total-price {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1200px; 
+    margin: auto;
+}
+
+.rides-section, .cart-section, .tickets-section, .today-ticket-section {
+    border: 2px solid #ccc; 
+    padding: 20px;
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+}
+
+.rides-section {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.cart-section {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.tickets-section {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.today-ticket-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; 
+}
+

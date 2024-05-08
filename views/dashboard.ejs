@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-grid">
+        <div class="rides-section">
+            <h1>Rides</h1>
+            <ul>
+                <% rides.forEach(ride => { %>
+                    <li>
+                        <img src="<%= ride.imageUrl %>" alt="<%= ride.name %>" style="max-width: 100px; max-height: 100px;">
+                        <strong><%= ride.name %></strong> - Fast-track Price: £<%= ride.fastTrackPrice.toFixed(2) %>
+                        <button class="add-to-cart" data-ride-id="<%= ride._id %>">Add to Cart</button>
+                    </li>
+                <% }); %>
+            </ul>
+            <h2>Purchase Tickets</h2>
+            <label for="ticketDate">Choose a date:</label>
+            <input type="date" id="ticketDate" name="ticketDate" min="<%= new Date().toISOString().split('T')[0] %>" required>
+            <p>Base Ticket Price: £<%= ticketPrice %></p>
+            <button id="addTicketToCart">Add Ticket to Cart</button>
+        </div>
+        <div class="cart-section">
+            <h3>Cart</h3>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total Price: £0.00</p>
+            <button id="checkout">Checkout</button>
+        </div>
+        <div class="tickets-section">
+            <h2>Your Tickets</h2>
+           
+        </div>
+        <div class="today-ticket-section">
+            <h2>Today's Ticket</h2>
+           
+        </div>
+    </div>
+    <button onclick="location.href='/logout'" class="logout-button">Logout</button>
+    <script src="/scripts/dashboard.js"></script>
+</body>
+</html>
