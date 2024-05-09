@@ -52,7 +52,6 @@ router.post('/cart/add', async (req, res) => {
     }
 });
 
-// Example for adding a ticket
 router.post('/tickets/add', async (req, res) => {
     const { date } = req.body;
     try {

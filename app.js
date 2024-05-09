@@ -30,7 +30,7 @@ const ticketRoutes = require('./routes/ticketRoutes');
 app.use('/tickets', ticketRoutes); 
 
 app.use(session({
-    secret: 'your_secret_key',  // Secret key to sign the session ID cookie
+    secret: 'your_secret_key',  
     resave: false,
     saveUninitialized: false
 }));
